@@ -1,0 +1,8 @@
+
+venv/
+password.txt
+__pycache__/
+*.pyc
+*.pyo
+
+
