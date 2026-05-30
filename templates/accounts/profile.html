@@ -1,0 +1,8 @@
+
+<h1>Profile Page</h1>
+
+<p>Welcome, {{ request.user.email }}!</p>
+
+<a href="{% url 'logout' %}">
+   <button>Logout</button>
+</a>
