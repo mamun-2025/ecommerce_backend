@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .decorators import seller_required
 
 from .forms import RegisterForm
 
@@ -61,3 +62,12 @@ def logout_view(request):
 @login_required
 def profile_view(request):
    return render(request, 'accounts/profile.html')
+
+
+@login_required
+@seller_required
+def seller_dashboard(request):
+   return render(
+      request,
+      'accounts/seller_dashboard.html'
+   )
