@@ -17,6 +17,10 @@ class User(AbstractUser):
       default='customer'
    )
    
+   is_blocked = models.BooleanField(
+      default=False
+   )
+
    USERNAME_FIELD = 'email'
    REQUIRED_FIELDS = ['username']
 
